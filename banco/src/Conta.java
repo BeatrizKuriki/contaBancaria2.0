@@ -4,6 +4,7 @@ public class Conta {
 	private int agencia;
 	private int numero;
 	private TitularConta titular;
+	private static int total=0;
 	
 	//construtor padrao
 	public Conta() {
@@ -11,6 +12,7 @@ public class Conta {
 	}
 	
 	public Conta(int agencia, int numero) {
+		Conta.total++;		
 		this.agencia = agencia;
 		this.numero = numero;
 		
@@ -77,4 +79,7 @@ public class Conta {
 	 public TitularConta getTitular() {
 		return titular;
 	}
+	 public static int getTotal() {
+		 return Conta.total;
+	 }
 }
