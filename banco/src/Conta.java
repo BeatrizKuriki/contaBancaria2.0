@@ -1,22 +1,9 @@
 
 public class Conta {
 	private double saldo;
-	private int agencia;
-	private int numero;
-	private TitularConta titular;
-	private static int total=0;
-	
-	//construtor padrao
-	public Conta() {
-		
-	}
-	
-	public Conta(int agencia, int numero) {
-		Conta.total++;		
-		this.agencia = agencia;
-		this.numero = numero;
-		
-	}
+	int agencia;
+	int numero;
+	TitularConta titular;
 
 	public void deposito(double valor) {
 		this.saldo = this.saldo + valor;
@@ -44,42 +31,11 @@ public class Conta {
 
 	}
 
-	public double getSaldo() {
+	public double pegaSaldo() {
 		return this.saldo;
 	}
 	
-	public int getNumero() {
-		return this.numero;
-		
-	}
+
 	
-	public void setNumero(int numero) {
-		if(numero <= 0) {
-			System.out.println("NÚMERO DA CONTA DEVE SER POSITVO E MAIOR QUE ZERO!");
-		return;
-		}
-		this.numero = numero;
-	}
-
-	public  void setAgencia(int agencia) {
-		if(agencia<= 0) {
-			System.out.println("NÚMERO DE AGÊNCIA DEVE SER POSITVO E MAIOR QUE ZERO!");
-		return;
-		}
-		this.agencia = agencia;
-	}
-	 public int getAgencia() {
-		 return this.agencia;	
-
-}
-	 public void setTitular(TitularConta titular) {
-		this.titular = titular;
-	}
-	 
-	 public TitularConta getTitular() {
-		return titular;
-	}
-	 public static int getTotal() {
-		 return Conta.total;
-	 }
+	
 }
