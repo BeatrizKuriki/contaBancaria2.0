@@ -1,8 +1,8 @@
 
 public class Conta {
-	private double saldo;
-	int agencia;
-	int numero;
+	protected double saldo;
+	protected int agencia;
+	protected int numero;
 	TitularConta titular;
 
 	public void deposito(double valor) {
