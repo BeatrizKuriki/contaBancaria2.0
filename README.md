@@ -1,2 +1,3 @@
-# contaBancaria2.0
+# contaBancaria2.0 em construção
+
 Projeto de conta bancária
